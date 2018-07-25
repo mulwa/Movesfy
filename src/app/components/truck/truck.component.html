@@ -1,0 +1,38 @@
+<div class="container"> 
+    <div class="top-button">        
+    <a href="#" routerLink="/add-truck" class="btn btn-primary"> <i class="fa fa-plus">  New Truck</i> </a>      
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4> Truck Drivers</h4>
+            <table class="table table-bordered table-striped" width="100%">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>Truck No</th>
+                    <th>Truck Type</th>
+                    <th>Type Capacity</th>
+                    <th>Truck Plates No</th>
+                    <th>Driver</th>
+                    <th>Action</th>
+                </tr>            
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Pick-up</td>
+                        <td>533Kg</td>
+                        <td>KBC-520</td>
+                        <td>Christopher</td>
+                        <td><button class="btn btn-danger"> <i class="fa fa-info"></i> details</button></td>
+                    </tr>            
+                </tbody>        
+            </table>
+        </div>
+        <ul>
+            <h4>List here</h4>
+            <li *ngFor="let item of items | async">
+               {{ item | json }}
+            </li>
+          </ul>
+    </div>      
+</div>
