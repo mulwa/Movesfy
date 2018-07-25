@@ -18,10 +18,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Christopher</td>
-                <td>Mulwa</td>
-                <td>0707200314</td>
+              <tr *ngFor="let driver of drivers">
+                <td>{{driver.firstname}}</td>
+                <td>{{ driver.surname}}</td>
+                <td>{{driver.mobileNo}}</td>
                 <td>07211564</td>
                 <td>mulwatech@gmail.com</td>
                 <td>KBS-552J</td>
@@ -29,7 +29,7 @@
                   Details</button></td>
               </tr>
             </tbody>      
-          </table>
+          </table>       
  
       </div>      
     </div>

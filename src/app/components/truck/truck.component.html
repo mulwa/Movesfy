@@ -28,11 +28,15 @@
                 </tbody>        
             </table>
         </div>
-        <ul>
+        <!-- <ul>
             <h4>List here</h4>
             <li *ngFor="let item of items | async">
                {{ item | json }}
             </li>
-          </ul>
+          </ul> -->
+          <div *ngIf="item$ | async as item">
+            First name is {{ item?.firstName }}
+            {{ item | json }}
+          </div>
     </div>      
 </div>

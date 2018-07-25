@@ -21,7 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // Angularfire imports
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuth} from 'angularfire2/auth';
 import { ClientService } from './services/client.service';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
@@ -36,16 +36,6 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
     messagingSenderId: '679790811575'
 
 };
-
-  // const firebaseconfig = {
-  //   apiKey: "AIzaSyBBRL8RAY1LjWJTWfmF040IEazPRgiShMg",
-  //   authDomain: "kaya-672b6.firebaseapp.com",
-  //   databaseURL: "https://kaya-672b6.firebaseio.com",
-  //   projectId: "kaya-672b6",
-  //   storageBucket: "kaya-672b6.appspot.com",
-  //   messagingSenderId: "986924244001"
-  // };
-
 
 @NgModule({
   declarations: [
@@ -68,10 +58,10 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
     BrowserModule,
     AppRouingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(firebaseconfig)
+    AngularFireModule.initializeApp(firebaseconfig),
+    AngularFireDatabaseModule
   ],
   providers: [
-    AngularFireDatabase,
     AngularFireAuth,
     ClientService
   ],
