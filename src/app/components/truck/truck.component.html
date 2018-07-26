@@ -10,33 +10,23 @@
                 <tr>
                     <th>Truck No</th>
                     <th>Truck Type</th>
-                    <th>Type Capacity</th>
+                    <th>Truck Capacity</th>
                     <th>Truck Plates No</th>
                     <th>Driver</th>
                     <th>Action</th>
                 </tr>            
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>01</td>
-                        <td>Pick-up</td>
-                        <td>533Kg</td>
-                        <td>KBC-520</td>
-                        <td>Christopher</td>
+                    <tr *ngFor="let truck of trucks">
+                        <td>{{truck.truckRegNo}}</td>
+                        <td>{{truck.truckType}}</td>
+                        <td>{{truck.truckCapacity}}</td>
+                        <td>{{truck.truckRegNo}}</td>
+                        <td>{{truck.truckDriver}}</td>
                         <td><button class="btn btn-danger"> <i class="fa fa-info"></i> details</button></td>
                     </tr>            
                 </tbody>        
             </table>
-        </div>
-        <!-- <ul>
-            <h4>List here</h4>
-            <li *ngFor="let item of items | async">
-               {{ item | json }}
-            </li>
-          </ul> -->
-          <div *ngIf="item$ | async as item">
-            First name is {{ item?.firstName }}
-            {{ item | json }}
-          </div>
+        </div>        
     </div>      
 </div>

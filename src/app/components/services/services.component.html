@@ -1,5 +1,29 @@
-<div class="container-fluid">
-    <h1> Destiny Movers Services</h1>
-    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>        
+<div class="container">     
+    <div class="row">
+        <div class="col-md-12">
+            <h4> Transport Requests</h4>
+            <table class="table table-bordered table-striped" width="100%">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>Pick location</th>
+                    <th>Drop location</th>
+                    <th>Cost</th>
+                    <th>Request Type</th>
+                    <th>Request note</th>
+                    <th>Action</th>
+                </tr>            
+                </thead>
+                <tbody>
+                    <tr *ngFor="let request of requests">
+                        <td>{{request.pickaddress}}</td>
+                        <td>{{request.dropaddress}}</td>
+                        <td>{{request.cost}}</td>
+                        <td>{{request.truckType}}</td>
+                        <td>{{request.requestNote}}</td>
+                        <td><button class="btn btn-danger"> <i class="fa fa-info"></i> details</button></td>
+                    </tr>            
+                </tbody>        
+            </table>
+        </div>        
+    </div>      
 </div>

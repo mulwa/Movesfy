@@ -12,7 +12,7 @@ import { TruckVisualizationComponent } from './components/truck-visualization/tr
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent},
-  { path: 'services', component:  TopNavComponent},
+  { path: 'services', component:  ServicesComponent},
   { path: 'driverDashboard', component: DriverComponent},
   { path: 'add-driver', component: AddDriverComponent},
   { path: 'truckDashboard', component: TruckComponent},

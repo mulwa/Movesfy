@@ -18,6 +18,7 @@ export class ClientService {
     this.truckRef = this.afd.list('trucks');
     this.driverRef = this.afd.list('drivers');
     this.customerRef  =  this.afd.list('customers');
+    this.requestRef = this.afd.list('requests');
   }
 
   public saveTruck(truck): Promise<string> {

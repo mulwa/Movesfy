@@ -12,7 +12,6 @@ import 'rxjs/add/operator/map';
 })
 export class DriverComponent implements OnInit {
   drivers: any;
-  driver2: any;
 
   constructor(private clientService: ClientService, private afd: AngularFireDatabase ) {
 
