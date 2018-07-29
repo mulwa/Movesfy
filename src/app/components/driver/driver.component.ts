@@ -12,17 +12,20 @@ import 'rxjs/add/operator/map';
 })
 export class DriverComponent implements OnInit {
   drivers: any;
+  showLoading: boolean = true;
 
   constructor(private clientService: ClientService, private afd: AngularFireDatabase ) {
 
   }
 
   ngOnInit() {
+    this.showLoading = true;
     this.getDriverList();
      }
 
   getDriverList() {
     this.clientService.getDriversList().snapshotChanges().map(changes => {
+      this.showLoading = false;
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
     }).subscribe(drivers => {
       this.drivers = drivers;

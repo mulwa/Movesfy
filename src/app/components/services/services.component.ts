@@ -9,14 +9,17 @@ import 'rxjs/add/operator/map';
 })
 export class ServicesComponent implements OnInit {
   requests: any;
+  showLoading: boolean = true;
 
   constructor( public clientService: ClientService) { }
 
   ngOnInit() {
+    this.showLoading = true;
     this.getRequest();
   }
   getRequest() {
     this.clientService.getRequestList().snapshotChanges().map(changes => {
+      this.showLoading = false;
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
     }).subscribe(drivers => {
       this.requests = drivers;

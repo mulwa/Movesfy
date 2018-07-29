@@ -1,3 +1,4 @@
+import { LoadingComponent } from './components/loading/loading.component';
 import { AddDriverComponent } from './components/add-driver/add-driver.component';
 import { AddTruckComponent } from './components/add-truck/add-truck.component';
 import { EditTruckComponent } from './components/edit-truck/edit-truck.component';
@@ -51,7 +52,8 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
     AddTruckComponent,
     EditDriverComponent,
     EditTruckComponent,
-    TopNavComponent
+    TopNavComponent,
+    LoadingComponent
 
   ],
   imports: [

@@ -48,6 +48,9 @@ export class ClientService {
   getDriversList(): AngularFireList<IDriver>  {
     return this.driverRef;
   }
+  deleteDriver() {
+
+  }
   getTruckList(): AngularFireList<Itruck> {
     return this.truckRef;
   }
@@ -57,4 +60,5 @@ export class ClientService {
   getRequestList(): AngularFireList<IRequest> {
     return this.requestRef;
   }
+
 }

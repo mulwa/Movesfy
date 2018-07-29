@@ -3,7 +3,8 @@
     <a href="#" routerLink="/add-truck" class="btn btn-primary"> <i class="fa fa-plus">  New Truck</i> </a>      
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <app-loading *ngIf="showLoading"> </app-loading>
+        <div class="col-md-12"  *ngIf="!showLoading">
             <h4> Truck Drivers</h4>
             <table class="table table-bordered table-striped" width="100%">
                 <thead class="thead-inverse">

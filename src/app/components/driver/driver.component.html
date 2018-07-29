@@ -3,7 +3,8 @@
        <a href="#" routerLink="/add-driver" class="btn btn-danger"> <i class="fa fa-plus">New driver</i> </a>
       </div>    
     <div class="row">
-      <div class="col-md-10">
+        <app-loading *ngIf="showLoading">  </app-loading>
+      <div class="col-md-10" *ngIf="!showLoading">
           <h4>Destiny Movers Drivers</h4>
           <table class="table table-bordered table-striped">
             <thead class="thead-inverse">
